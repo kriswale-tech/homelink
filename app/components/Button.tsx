@@ -20,9 +20,12 @@ const Button = ({
   variant = "primary",
 }: ButtonProps) => {
   const variantClasses = {
-    primary: "bg-evergreen text-ivory",
-    secondary: "bg-sand text-evergreen",
-    tertiary: "bg-transparent text-evergreen border border-evergreen",
+    primary:
+      "bg-evergreen text-ivory hover:bg-ivory hover:text-evergreen transition-colors duration-300",
+    secondary:
+      "bg-sand text-evergreen hover:bg-evergreen hover:text-ivory transition-colors duration-300",
+    tertiary:
+      "bg-transparent text-evergreen border border-evergreen hover:bg-evergreen hover:text-ivory transition-colors duration-300",
   };
 
   const sizeClasses = {
@@ -33,7 +36,7 @@ const Button = ({
 
   return (
     <button
-      className={`rounded-full ${variantClasses[variant]} ${sizeClasses[size]} ${className}`}
+      className={`rounded-full cursor-pointer ${variantClasses[variant]} ${sizeClasses[size]} ${className}`}
       onClick={onClick}
       disabled={disabled}
       type={type}
