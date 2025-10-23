@@ -20,7 +20,7 @@ const HowItWorks = () => {
     {
       title: "Relax and Enjoy",
       description:
-        "Once confirmed, your provider shows up as scheduled to get the job done. When the service is complete, pay securely, either online or in cash. It’s that simple.",
+        "Once confirmed, your provider shows up as scheduled to get the job done. When the service is complete, pay securely, either online or in cash. It's that simple.",
       image: "/images/how-it-works/man-2.png",
       count: 3,
     },
@@ -31,7 +31,7 @@ const HowItWorks = () => {
         <HowItWorksCard
           key={card.title}
           {...card}
-          className={`${card.count === 2 ? "flex-row-reverse" : ""}`}
+          className={`${card.count === 2 ? "sm:flex-row-reverse" : ""}`}
         />
       ))}
     </div>

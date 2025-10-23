@@ -29,17 +29,19 @@ const ServicesBar = () => {
     },
   ];
   return (
-    <div className="bg-evergreen flex justify-center p-8 rounded-[25px] gap-10">
+    <div className="bg-evergreen flex justify-center p-6 md:p-8 rounded-[25px] xl:gap-10 lg:gap-6 gap-4 flex-wrap md:flex-nowrap">
       {services.map((service, index) => (
-        <div className="flex flex-col items-center gap-2" key={index}>
+        <div className="flex flex-col items-center md:gap-2 gap-1" key={index}>
           <Image
             src={service.image}
             alt="services-bar"
-            className="size-14 mb-2"
+            className="size-8 md:size-10 xl:size-14 mb-2"
             width={50}
             height={50}
           />
-          <p className="text-sm text-ivory">{service.name}</p>
+          <p className="text-xs lg:text-sm xl:text-base text-ivory whitespace-nowrap">
+            {service.name}
+          </p>
         </div>
       ))}
     </div>

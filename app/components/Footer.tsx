@@ -16,11 +16,13 @@ const Footer = () => {
   return (
     <footer className="bg-evergreen text-ivory rounded-t-[25px]">
       {/* areas */}
-      <div className="max-width py-8">
+      <div className=" py-8 overflow-x-auto hide-scrollbar">
         <div className=" divide-x divide-ivory flex mx-auto w-fit">
-          <span className="font-gilroy-bold px-6">Major Areas</span>
+          <span className="font-gilroy-bold sm:px-6 px-4 whitespace-nowrap sticky left-0 bg-evergreen z-10">
+            Major Areas
+          </span>
           {areas.map((area) => (
-            <span key={area} className="px-6">
+            <span key={area} className="sm:px-6 px-4 whitespace-nowrap">
               {area}
             </span>
           ))}
@@ -29,9 +31,9 @@ const Footer = () => {
 
       <hr className="border-ivory" />
 
-      <div className="max-width py-8 flex gap-32 items-center">
+      <div className="max-width py-8 flex sm:flex-row flex-col gap-10 lg:gap-32 sm:items-center">
         {/* content */}
-        <div className="w-[400px] space-y-6">
+        <div className="sm:w-[400px] w-full space-y-6">
           {/* logo */}
           <div className="w-52">
             <Image
